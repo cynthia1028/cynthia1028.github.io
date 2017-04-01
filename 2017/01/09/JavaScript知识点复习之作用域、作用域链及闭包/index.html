@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://cynthia1028.me">
+  <title>JavaScript知识点复习之作用域、作用域链及闭包 | 辛亚男的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1 作用域
+JavaScript中的函数作用域是指：变量在声明它的函数体以及这个函数体嵌套的任意函数体内都是有定义的。函数体内声明的所有变量（不涉及到赋值）都被提前至函数的顶部声明，这种特性也被称为“声明提前”。
+123456function test()&amp;#123;    console.log(x);     //undefined    var x = 10;    console.log(">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript知识点复习之作用域、作用域链及闭包">
+<meta property="og:url" content="http://cynthia1028.me/2017/01/09/JavaScript知识点复习之作用域、作用域链及闭包/index.html">
+<meta property="og:site_name" content="辛亚男的博客">
+<meta property="og:description" content="1 作用域
+JavaScript中的函数作用域是指：变量在声明它的函数体以及这个函数体嵌套的任意函数体内都是有定义的。函数体内声明的所有变量（不涉及到赋值）都被提前至函数的顶部声明，这种特性也被称为“声明提前”。
+123456function test()&amp;#123;    console.log(x);     //undefined    var x = 10;    console.log(">
+<meta property="og:updated_time" content="2017-01-09T13:31:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript知识点复习之作用域、作用域链及闭包">
+<meta name="twitter:description" content="1 作用域
+JavaScript中的函数作用域是指：变量在声明它的函数体以及这个函数体嵌套的任意函数体内都是有定义的。函数体内声明的所有变量（不涉及到赋值）都被提前至函数的顶部声明，这种特性也被称为“声明提前”。
+123456function test()&amp;#123;    console.log(x);     //undefined    var x = 10;    console.log(">
+  
+    <link rel="alternative" href="/atom.xml" title="辛亚男的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="img/favicon.ico">
+  
+  <link rel="stylesheet" href="/main.css?v=4.0.0.css">
+  
+
+</head>
+
+<body>
+  <div id="container" q-class="show:isCtnShow">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="http://p1.bqimg.com/581088/dc0fc158bc99a603.jpg" class="js-avatar">
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Cynthia</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">写优雅的代码，做狂野的姑娘</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/tags/笔记/">笔记</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a data-idx="0" q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a data-idx="1" q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/cynthia1028" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/u/2257276560/home?wvr=5&lf=reg" title="weibo"><i class="icon-weibo"></i></a>
+		        
+					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+		        
+					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/xin-ya-nan-80/activities" title="zhihu"><i class="icon-zhihu"></i></a>
+		        
+					<a class="mail" target="_blank" href="mailto:cynthia_xyn@163.com" title="mail"><i class="icon-mail"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-sort"></i></div>
+  		<h1 class="header-author js-mobile-header hide">Cynthia</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="http://p1.bqimg.com/581088/dc0fc158bc99a603.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Cynthia</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">写优雅的代码，做狂野的姑娘</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/tags/笔记/">笔记</a></li>
+		        
+		        
+		        	<li><a href="/archives/">所有文章</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/cynthia1028" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/2257276560/home?wvr=5&lf=reg" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/xin-ya-nan-80/activities" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+						<a class="mail" target="_blank" href="mailto:cynthia_xyn@163.com" title="mail"><i class="icon-mail"></i></a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            <article id="post-JavaScript知识点复习之作用域、作用域链及闭包" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JavaScript知识点复习之作用域、作用域链及闭包
+    </h1>
+  
+
+        <a href="/2017/01/09/JavaScript知识点复习之作用域、作用域链及闭包/" class="archive-article-date">
+  	<time datetime="2017-01-09T13:31:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-09</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1 <strong>作用域</strong></p>
+<p>JavaScript中的函数作用域是指：变量在声明它的函数体以及这个函数体嵌套的任意函数体内都是有定义的。函数体内声明的所有变量（不涉及到赋值）都被提前至函数的顶部声明，这种特性也被称为“声明提前”。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function test()&#123;</div><div class="line">    console.log(x);     //undefined</div><div class="line">    var x = 10;</div><div class="line">    console.log(x);     //10</div><div class="line">&#125;</div><div class="line">test();</div></pre></td></tr></table></figure>
+<p>  全局变量拥有全局作用域，在JavaScript代码的任何地方都可以访问；在函数内部声明的变量只在函数体内有定义，即为局部变量，其作用是局部性的。<br><a id="more"></a><br>Notice:在函数体内声明变量时，如果不使用 var 关键字，则将声明全局变量。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var x = &quot;global&quot;;</div><div class="line">function test()&#123;</div><div class="line">    var x = &quot;local&quot;;</div><div class="line">    return x;</div><div class="line">&#125;</div><div class="line">console.log(test());     //local</div></pre></td></tr></table></figure>
+<p>2 <strong>作用域链</strong></p>
+<p>定义一个函数时(保存了一个作用域链）：创建两个对象————函数对象和全局对象</p>
+<ul>
+<li>函数对象：封装了函数的定义，但暂时不读取函数定义。</li>
+<li>全局对象：专门保存函数可用的变量所在位置的对象。</li>
+</ul>
+<p>当一个函数被调用时：创建一个新对象————活动对象</p>
+<ul>
+<li>活动对象：临时封装本次调用函数时使用的局部变量，并将活动对象的引用压入全局对象中。</li>
+</ul>
+<p>当函数调用完成后：如果没有其他引用指向此次调用所创建的活动对象，该对象引用出栈，活动对象及其内部的局部变量一同释放。</p>
+<p>举个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">var name = &quot;one&quot;;</div><div class="line">function test()&#123;</div><div class="line">    var name = &quot;two&quot;;</div><div class="line">    function test1()&#123;</div><div class="line">        var name = &quot;three&quot;;</div><div class="line">        console.log(name);//three</div><div class="line">    &#125;</div><div class="line">    function test2()&#123;</div><div class="line">        console.log(name);//two</div><div class="line">    &#125;</div><div class="line">    test1();</div><div class="line">    test2();</div><div class="line">&#125;</div><div class="line">test();</div></pre></td></tr></table></figure>
+<p> 当成功调用test1()时，顺序为test1()-&gt;test()-&gt;全局对象window,因为在test1()上就找到了name的值three，所以完成搜索返回；<br> 当成功调用test2()时，顺序为test2()-&gt;test()-&gt;全局对象window,因为在test2()上没找到name的值，所以找test()中的，找到了name的值two,就完成搜索返回。</p>
+<p>3 <strong>闭包</strong></p>
+<p>判断闭包的特征：<br> a. 函数嵌套；<br> b. 内层函数使用外层函数的局部变量；<br> c. 内层函数被返回到外部，在外部调用。</p>
+<p>举个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var a = 100;</div><div class="line">function f()&#123;</div><div class="line">    var a = 200;</div><div class="line">    function g()&#123;</div><div class="line">        return a;</div><div class="line">    &#125;</div><div class="line">    return g;</div><div class="line">&#125;</div><div class="line">console.log(f()());//200</div></pre></td></tr></table></figure>
+<p>上述代码意味着，先执行f(),得到该函数内嵌套的一个函数对象g,然后调用这个嵌套函数。</p>
+<p>再来个例子，闭包的典型应用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var n = 10;</div><div class="line">function counter()&#123;</div><div class="line">    var n = 0;</div><div class="line">    var g = function ()&#123;</div><div class="line">        return ++n;</div><div class="line">    &#125;;</div><div class="line">    return g;</div><div class="line">&#125;</div><div class="line">var c1 = counter();</div><div class="line">console.log(c1());//1</div><div class="line">console.log(c1());//2</div></pre></td></tr></table></figure>
+<p>何时使用：即要重用变量，又要保护变量不被污染。<br>缺点：占用更多内存空间。</p>
+<p>这只是对闭包一个浅浅的理解，后续还会深入透彻理解。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记，JS/">笔记，JS</a></li></ul>
+	</div>
+
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://cynthia1028.me/2017/01/09/JavaScript知识点复习之作用域、作用域链及闭包/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2016/12/16/开启博客之旅/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">开启博客之旅</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Cynthia
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js?v=4.0.0.js"></script>
+
+
+    
+<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">笔记，JS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">文艺</a>
+              </li>
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            2、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: true
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-me" q-show="aboutme">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">我只信奉一些尽可能长远的东西，如美、自由、善意、人性的欲望和幽暗;身体与性、物质和时间、科技的快和人心的慢;巨川长河、风霜雨雪、四时花草对人的滋养......</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
