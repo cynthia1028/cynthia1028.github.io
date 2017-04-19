@@ -6,26 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://cynthia1028.me">
-  <title>走进Benqio | 辛亚男的博客</title>
+  <title>浅谈前端浏览器兼容性 | 辛亚男的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="——畅聊和一帮爷们一起奋斗的第一个月
-
-一个月，对于行业的了解逐渐由混沌变得清晰前三个礼拜，纯粹穷忙找不到工作重点，东一榔头西一棒庆幸的是居然每天感觉还很充实应该是新鲜感、好奇心所主导这个星期，能够自我设定明确目标，并为之努力💪这就是时间的的神奇。">
+  <meta name="description" content="经过千百次的百度，Google终于对传说中的浏览器兼容性有了稍微系统一点的认识💃💃💃简单阐述一下所谓的系统认知：  
+css兼容1.盒模型差异解决：*{margin:0;padding:0}2.IE6 margin加倍div float后，并设置了横向的margin，IE6显示margin比设置的大解决：在float的标签样式控制中加入display:inline;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="走进Benqio">
-<meta property="og:url" content="http://cynthia1028.me/2017/04/14/走进Benqio/index.html">
+<meta property="og:title" content="浅谈前端浏览器兼容性">
+<meta property="og:url" content="http://cynthia1028.me/2017/04/18/浅谈前端浏览器兼容性/index.html">
 <meta property="og:site_name" content="辛亚男的博客">
-<meta property="og:description" content="——畅聊和一帮爷们一起奋斗的第一个月
-
-一个月，对于行业的了解逐渐由混沌变得清晰前三个礼拜，纯粹穷忙找不到工作重点，东一榔头西一棒庆幸的是居然每天感觉还很充实应该是新鲜感、好奇心所主导这个星期，能够自我设定明确目标，并为之努力💪这就是时间的的神奇。">
-<meta property="og:image" content="http://i2.muimg.com/581088/3950a12721c772b5t.jpg">
-<meta property="og:updated_time" content="2017-04-14T15:55:06.000Z">
+<meta property="og:description" content="经过千百次的百度，Google终于对传说中的浏览器兼容性有了稍微系统一点的认识💃💃💃简单阐述一下所谓的系统认知：  
+css兼容1.盒模型差异解决：*{margin:0;padding:0}2.IE6 margin加倍div float后，并设置了横向的margin，IE6显示margin比设置的大解决：在float的标签样式控制中加入display:inline;">
+<meta property="og:updated_time" content="2017-04-19T05:02:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="走进Benqio">
-<meta name="twitter:description" content="——畅聊和一帮爷们一起奋斗的第一个月
-
-一个月，对于行业的了解逐渐由混沌变得清晰前三个礼拜，纯粹穷忙找不到工作重点，东一榔头西一棒庆幸的是居然每天感觉还很充实应该是新鲜感、好奇心所主导这个星期，能够自我设定明确目标，并为之努力💪这就是时间的的神奇。">
-<meta name="twitter:image" content="http://i2.muimg.com/581088/3950a12721c772b5t.jpg">
+<meta name="twitter:title" content="浅谈前端浏览器兼容性">
+<meta name="twitter:description" content="经过千百次的百度，Google终于对传说中的浏览器兼容性有了稍微系统一点的认识💃💃💃简单阐述一下所谓的系统认知：  
+css兼容1.盒模型差异解决：*{margin:0;padding:0}2.IE6 margin加倍div float后，并设置了横向的margin，IE6显示margin比设置的大解决：在float的标签样式控制中加入display:inline;">
   
     <link rel="alternative" href="/atom.xml" title="辛亚男的博客" type="application/atom+xml">
   
@@ -152,47 +147,69 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-走进Benqio" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-浅谈前端浏览器兼容性" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      走进Benqio
+      浅谈前端浏览器兼容性
     </h1>
   
 
-        <a href="/2017/04/14/走进Benqio/" class="archive-article-date">
-  	<time datetime="2017-04-14T02:33:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-14</time>
+        <a href="/2017/04/18/浅谈前端浏览器兼容性/" class="archive-article-date">
+  	<time datetime="2017-04-18T03:08:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-18</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><em>——畅聊和一帮爷们一起奋斗的第一个月</em></p>
-<hr>
-<p>一个月，对于行业的了解逐渐由混沌变得清晰<br>前三个礼拜，纯粹穷忙<br>找不到工作重点，东一榔头西一棒<br>庆幸的是居然每天感觉还很充实<br>应该是新鲜感、好奇心所主导<br>这个星期，能够自我设定明确目标，并为之努力💪<br>这就是时间的的神奇。<br><a id="more"></a></p>
-<h4 id="浑浑噩噩走过的路："><a href="#浑浑噩噩走过的路：" class="headerlink" title="浑浑噩噩走过的路："></a>浑浑噩噩走过的路：</h4><ul>
-<li>埋头苦读typescript文档</li>
-<li>学习angular2（半途而废，底子薄弱，看不懂，很无奈🤷‍♀️）</li>
-<li>竭尽全力了解所谓的工作流（居然还be pround of it）<br><img src="http://i2.muimg.com/581088/3950a12721c772b5t.jpg" alt="sorry"></li>
-<li>知晓了grafana、vue-echars-v3、仪表盘adminLte模版的存在（很惭愧现在就只是对这几个单词眼熟而已）<br>……</li>
-</ul>
-<p>看过美丽炫酷的web页面<br>总想人机交互更友好<br>我的天，一个“更”字<br>能够要了我这种患有严重强迫症的人半条老命<br>算了，管不了那么多的planA、B、C…😭<br>这还是我心心念念一直大爱的前端么？</p>
-<h4 id="如梦初醒："><a href="#如梦初醒：" class="headerlink" title="如梦初醒："></a>如梦初醒：</h4><p>空洞的理论学习<br>不大适合脑袋不灵光的我<br>找个项目下手吧，也许这才是条明路！<br>隔壁邻座的耿直boy自然成了我的现实版度娘👍  </p>
-<p>1.先了解bootstrap-table框架、arttemplate以及seajs的基本用法（混个面熟，看到 不至于一脸懵逼样😳）<br>2.捋清楚整个项目的大体轮廓，选择一个页面模块深入理解<br>3.找到相关页面的代码，通过看、查、问，达到阶段小目标：懂<br>4.归纳整理</p>
+        <p>经过千百次的百度，Google<br>终于对传说中的浏览器兼容性有了稍微系统一点的认识💃💃💃<br>简单阐述一下所谓的系统认知：  </p>
+<h3 id="css兼容"><a href="#css兼容" class="headerlink" title="css兼容"></a>css兼容</h3><p>1.盒模型差异<br>解决：<code>*{margin:0;padding:0}</code><br>2.IE6 margin加倍<br>div float后，并设置了横向的margin，IE6显示margin比设置的大<br>解决：在float的标签样式控制中加入<code>display:inline;</code><br><a id="more"></a><br>3.IE6最小高度<br>IE6不支持min-height属性，默认height为最小高度<br>解决：使用IE6不支持但其余浏览器支持的属性!important<br><em>eg:设置一个div的最小高度为200px</em> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">div&#123; </div><div class="line">	min-height:200px;</div><div class="line">	height:auto !important;</div><div class="line">	height:200px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>4.高度问题<br>设置较小高度标签（小于10px），IE6、7不受控制，超出自己设置高度<br>解决：给超出高度的标签设置<code>overflow:hidden;font-size:高度；</code><br>5.双倍边距<br>行内属性标签设置display:block后，采用float布局，又有横向margin，IE6中会出现双倍边距   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">.divBox&#123;</div><div class="line">	float:left;</div><div class="line">	width:100px;</div><div class="line">	margin:0 0 0 100px;  //ie6下会产生200px的边距</div><div class="line">	display:inline;//使浮动忽略，但高度不可设置了</div><div class="line">	display:table;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>6.image标签-图片存在边距<br>几个img标签放在一起，有些浏览器会有默认的间距，加了<code>*{margin:0px;padding:0px;}</code>的通配符也不起作用<br>解决：用float为img布局<br>7.ul和li列表缩进<br>解决:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">ul,ol&#123;</div><div class="line">	margin:0px;</div><div class="line">	padding:0px;</div><div class="line">	list-style:none;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>8.a标签css顺序<br>被点击过后的超链接不再具有hover和active属性<br>解决：按lvha顺序书写css<br>9.透明度<br>解决:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">opacity:0.8;//通用</div><div class="line">filter:alpha(opacity=80);//IE</div></pre></td></tr></table></figure></p>
+<p>10.水平居中<br>IE6下使用<code>margin:0 auto;</code>无法使其居中<br>解决：为其父元素设置<code>text-align:center;</code><br>11.垂直居中<br>在浏览器中设置vertical-align:middle;不起作用。<br>解决：<code>line-height:与容器的height一样;</code><br>12.对于一些CSS3属性，会有浏览器的兼容问题，需要添加浏览器引擎前缀去匹配<br>需添加浏览器引擎前缀的属性：</p>
 <blockquote>
 <ul>
-<li>学会阅读bootstrap-table官方文档，根据example会运用到实例中</li>
-<li>学习layer、jquerysteps等小插件的使用</li>
-<li>了解jquery的一些特殊的语法应用，并加以特别记忆</li>
-<li>多看几遍，越来越觉得这些大段大段黑压压的代码可爱了😊</li>
+<li>@keyframes</li>
+<li>移动和变换属性(transition-property, transition-duration, transition-timing-function, transition-delay)</li>
+<li>动画属性 (animation-name, animation-duration, animation-timing-function, animation-delay)</li>
+<li>border-radius</li>
+<li>box-shadow</li>
+<li>backface-visibility</li>
+<li>column属性</li>
+<li>flex属性</li>
+<li>perspective属性<br>…… </li>
 </ul>
 </blockquote>
-<p>Oh,how time flies!<br>我得去挺尸了<br>明天得继续两眼放光的看我那可爱的代码呢！</p>
-<p>晚安，我爱的Soochow！  </p>
-<p><strong>4月13日深夜于安静卧室</strong></p>
+<p>eg: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">.myClass &#123;</div><div class="line">	-webkit-animation-name: fadeIn;</div><div class="line">	-moz-animation-name: fadeIn;</div><div class="line">	-o-animation-name: fadeIn;</div><div class="line">	-ms-animation-name: fadeIn;</div><div class="line">	animation-name: fadeIn;  /* 不带前缀的放到最后 */</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="CSS-hack"><a href="#CSS-hack" class="headerlink" title="CSS hack"></a>CSS hack</h3><p>1.IE条件注释<br>语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;!--[if &lt;keywords&gt;? IE &lt;version&gt;?]&gt; /*keywords取值：空；gt；gte；lt；lte；！*／</div><div class="line">满足条件要执行的代码</div><div class="line">&lt;![endif]--&gt;</div></pre></td></tr></table></figure></p>
+<p>2.属性过滤器<br>\9 ie10之前的ie浏览器解析的代码<br>+或者* 表示ie7包括7之前的ie浏览器<br>_表示 ie6包括6之前的ie浏览器<br>eg：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.test &#123;  </div><div class="line">color: #090\9; /* For IE8+ */</div><div class="line">*color: #f00;  /* For IE7 and earlier */</div><div class="line">_color: #ff0;  /* For IE6 and earlier */</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><em>文字码到这里<br>瞬间觉得很有必要积累一个属于自己的reset.css  📒<br>结合自己的经验<br>尽量避免出现不兼容问题</em></p>
+<h3 id="JS兼容"><a href="#JS兼容" class="headerlink" title="JS兼容"></a>JS兼容</h3><p>1.集合类对象<br>IE可以使用()或[]获取集合类对象，而Firefox只能用[]获取<br>解决：统一使用[]获取集合类对象<br>2.通过ID获取元素<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Firefox:document.getElementById(&quot;idName&quot;);  </div><div class="line">IE：document.idname或者document.getElementById(&quot;idName&quot;);</div></pre></td></tr></table></figure></p>
+<p>解决：统一使用<code>document.getElementById(&quot;idName&quot;);</code><br>3.常量定义<br>Firefox:可以使用const或var关键字来定义常量<br>IE:只能使用var关键字来定义<br>解决:统一使用var关键字来定义常量<br>4.input.type属性<br>IE:input.type属性为只读<br>Firefox:input.type属性为读写<br>解决:尽量避免修改input类型，若必须修改，可以先隐藏原来的input，然后在同样的位置插入一个新的input<br>5.事件监听<br>DOM标准:elem.addEventlistener()<br>IE8:elem.attachEvent()<br>解决：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function addEvent(elem, eventName, handler) &#123;</div><div class="line">　　if (elem.attachEvent) &#123;</div><div class="line">　　　　elem.attachEvent(&quot;on&quot; + eventName,function()&#123;</div><div class="line">　　　　　　handler.call(elem)&#125;); 　 //此处使用回调函数call()，让this指向elem　　</div><div class="line">  &#125; else if (elem.addEventListener) &#123;</div><div class="line">　　    elem.addEventListener(eventName, handler, false);　　</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>6.事件对象<br>DOM标准：事件对象作为事件处理函数第一个参数传入函数中argumnets[0]<br>IE:事件对象是window下的一个全局属性 window.event<br>解决:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var e=window.event || arguments[0]</div></pre></td></tr></table></figure>
+<p>7.阻止事件冒泡<br>DOM标准:e.stopPropagation()<br>IE:e.cancelBubble=true<br>解决:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if(e.stopPropagation)&#123;</div><div class="line">	e.stopPropagation();</div><div class="line">&#125;else&#123;</div><div class="line">	e.cancelBubble=true;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>8.获取目标元素<br>解决:<code>var target = e.target || e.srcElement</code>前者是DOM标准下的，后者是IE下的<br>9.阻止默认行为<br>解决：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if(e.preventDefault)&#123;</div><div class="line">	e.preventDefault();//DOM</div><div class="line">&#125;else&#123;</div><div class="line">	e.returnValue=false;//IE</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>10.滚动条<br>解决：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.documentElement.scrollTop || document.body.scrollTop</div></pre></td></tr></table></figure></p>
+<p>前者是DOM标准下的写法，后者是IE<br>11.坐标<br>解决:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var page = &#123;&#125;;</div><div class="line">page.x = event.x ? event.x : event.pageX;</div><div class="line">page.y = event.y ? event.y:event.pageY;</div><div class="line">//event的x,y在IE中支持，pageX和pageY在Firefox中支持</div></pre></td></tr></table></figure></p>
+<p>12.键盘事件<br>解决:</p>
+<pre><code>function getKeyCode(e){
+      //兼容IE和Firefox获得keyBoardEvent对象
+     e = e ? e : (window.event ? window.event : &quot;&quot;)  
+      //兼容IE和Firefox获得keyBoardEvent对象的键值
+      return e.keyCode ? e.keyCode : e.which;
+ }
+  //IE：e.keyCode
+  //fireFox: e.which
+</code></pre><p>以上仅仅是本人学习过程中碰到的，包括网上参考别人整理的，目前只收录这么多，后期如有补充会及时收录！📝</p>
 
       
 
@@ -224,7 +241,7 @@
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
 	</div>
 
       
@@ -277,7 +294,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://cynthia1028.me/2017/04/14/走进Benqio/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://cynthia1028.me/2017/04/18/浅谈前端浏览器兼容性/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -291,18 +308,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/04/18/浅谈前端浏览器兼容性/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          浅谈前端浏览器兼容性
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/01/09/JavaScript知识点复习之作用域、作用域链及闭包/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JavaScript知识点复习之作用域、作用域链及闭包</div>
+    <a href="/2017/04/14/走进Benqio/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">走进Benqio</div>
       <i class="icon-circle-right"></i>
     </a>
   
