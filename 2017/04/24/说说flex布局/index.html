@@ -6,24 +6,36 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://cynthia1028.me">
-  <title>JavaScript知识点复习之作用域、作用域链及闭包 | 辛亚男的博客</title>
+  <title>说说flex布局 | 辛亚男的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1 作用域
-JavaScript中的函数作用域是指：变量在声明它的函数体以及这个函数体嵌套的任意函数体内都是有定义的。函数体内声明的所有变量（不涉及到赋值）都被提前至函数的顶部声明，这种特性也被称为“声明提前”。
-123456function test()&amp;#123;    console.log(x);     //undefined    var x = 10;    console.log(">
+  <meta name="description" content="Flex是Flexible Box的缩写，即为“弹性布局”的意思Flex布局，可以简便、完整、响应式地实现各种页面的布局任何容器都可以为Flex布局：    
+
+通常：.box{display: flex;}   
+行内元素：.box{display: inline-flex;} 
+Webkit内核的浏览器:
+
+1234.box&amp;#123;	display: -webkit-flex;/*Safa">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript知识点复习之作用域、作用域链及闭包">
-<meta property="og:url" content="http://cynthia1028.me/2017/01/09/JavaScript知识点复习之作用域、作用域链及闭包/index.html">
+<meta property="og:title" content="说说flex布局">
+<meta property="og:url" content="http://cynthia1028.me/2017/04/24/说说flex布局/index.html">
 <meta property="og:site_name" content="辛亚男的博客">
-<meta property="og:description" content="1 作用域
-JavaScript中的函数作用域是指：变量在声明它的函数体以及这个函数体嵌套的任意函数体内都是有定义的。函数体内声明的所有变量（不涉及到赋值）都被提前至函数的顶部声明，这种特性也被称为“声明提前”。
-123456function test()&amp;#123;    console.log(x);     //undefined    var x = 10;    console.log(">
-<meta property="og:updated_time" content="2017-04-01T08:44:10.000Z">
+<meta property="og:description" content="Flex是Flexible Box的缩写，即为“弹性布局”的意思Flex布局，可以简便、完整、响应式地实现各种页面的布局任何容器都可以为Flex布局：    
+
+通常：.box{display: flex;}   
+行内元素：.box{display: inline-flex;} 
+Webkit内核的浏览器:
+
+1234.box&amp;#123;	display: -webkit-flex;/*Safa">
+<meta property="og:updated_time" content="2017-04-24T15:22:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript知识点复习之作用域、作用域链及闭包">
-<meta name="twitter:description" content="1 作用域
-JavaScript中的函数作用域是指：变量在声明它的函数体以及这个函数体嵌套的任意函数体内都是有定义的。函数体内声明的所有变量（不涉及到赋值）都被提前至函数的顶部声明，这种特性也被称为“声明提前”。
-123456function test()&amp;#123;    console.log(x);     //undefined    var x = 10;    console.log(">
+<meta name="twitter:title" content="说说flex布局">
+<meta name="twitter:description" content="Flex是Flexible Box的缩写，即为“弹性布局”的意思Flex布局，可以简便、完整、响应式地实现各种页面的布局任何容器都可以为Flex布局：    
+
+通常：.box{display: flex;}   
+行内元素：.box{display: inline-flex;} 
+Webkit内核的浏览器:
+
+1234.box&amp;#123;	display: -webkit-flex;/*Safa">
   
     <link rel="alternative" href="/atom.xml" title="辛亚男的博客" type="application/atom+xml">
   
@@ -150,52 +162,39 @@ JavaScript中的函数作用域是指：变量在声明它的函数体以及这�
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JavaScript知识点复习之作用域、作用域链及闭包" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-说说flex布局" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      JavaScript知识点复习之作用域、作用域链及闭包
+      说说flex布局
     </h1>
   
 
-        <a href="/2017/01/09/JavaScript知识点复习之作用域、作用域链及闭包/" class="archive-article-date">
-  	<time datetime="2017-01-09T13:31:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-09</time>
+        <a href="/2017/04/24/说说flex布局/" class="archive-article-date">
+  	<time datetime="2017-04-24T03:08:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-24</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1 <strong>作用域</strong></p>
-<p>JavaScript中的函数作用域是指：变量在声明它的函数体以及这个函数体嵌套的任意函数体内都是有定义的。函数体内声明的所有变量（不涉及到赋值）都被提前至函数的顶部声明，这种特性也被称为“声明提前”。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(x);     <span class="comment">//undefined</span></div><div class="line">    <span class="keyword">var</span> x = <span class="number">10</span>;</div><div class="line">    <span class="built_in">console</span>.log(x);     <span class="comment">//10</span></div><div class="line">&#125;</div><div class="line">test();</div></pre></td></tr></table></figure>
-<p>  全局变量拥有全局作用域，在JavaScript代码的任何地方都可以访问；在函数内部声明的变量只在函数体内有定义，即为局部变量，其作用是局部性的。<br><a id="more"></a><br>Notice:在函数体内声明变量时，如果不使用 var 关键字，则将声明全局变量。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = <span class="string">"global"</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> x = <span class="string">"local"</span>;</div><div class="line">    <span class="keyword">return</span> x;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(test());     <span class="comment">//local</span></div></pre></td></tr></table></figure>
-<p>2 <strong>作用域链</strong></p>
-<p>定义一个函数时(保存了一个作用域链）：创建两个对象————函数对象和全局对象</p>
+        <p>Flex是Flexible Box的缩写，即为“弹性布局”的意思<br>Flex布局，可以简便、完整、响应式地实现各种页面的布局<br>任何容器都可以为Flex布局：    </p>
 <ul>
-<li>函数对象：封装了函数的定义，但暂时不读取函数定义。</li>
-<li>全局对象：专门保存函数可用的变量所在位置的对象。</li>
+<li>通常：<code>.box{display: flex;}</code>   </li>
+<li>行内元素：<code>.box{display: inline-flex;}</code> </li>
+<li>Webkit内核的浏览器:</li>
 </ul>
-<p>当一个函数被调用时：创建一个新对象————活动对象</p>
-<ul>
-<li>活动对象：临时封装本次调用函数时使用的局部变量，并将活动对象的引用压入全局对象中。</li>
-</ul>
-<p>当函数调用完成后：如果没有其他引用指向此次调用所创建的活动对象，该对象引用出栈，活动对象及其内部的局部变量一同释放。</p>
-<p>举个例子：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"one"</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> name = <span class="string">"two"</span>;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">test1</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> name = <span class="string">"three"</span>;</div><div class="line">        <span class="built_in">console</span>.log(name);<span class="comment">//three</span></div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">test2</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(name);<span class="comment">//two</span></div><div class="line">    &#125;</div><div class="line">    test1();</div><div class="line">    test2();</div><div class="line">&#125;</div><div class="line">test();</div></pre></td></tr></table></figure>
-<p> 当成功调用test1()时，顺序为test1()-&gt;test()-&gt;全局对象window,因为在test1()上就找到了name的值three，所以完成搜索返回；<br> 当成功调用test2()时，顺序为test2()-&gt;test()-&gt;全局对象window,因为在test2()上没找到name的值，所以找test()中的，找到了name的值two,就完成搜索返回。</p>
-<p>3 <strong>闭包</strong></p>
-<p>判断闭包的特征：<br> a. 函数嵌套；<br> b. 内层函数使用外层函数的局部变量；<br> c. 内层函数被返回到外部，在外部调用。</p>
-<p>举个例子：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">100</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> a = <span class="number">200</span>;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">g</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> a;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> g;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(f()());<span class="comment">//200</span></div></pre></td></tr></table></figure>
-<p>上述代码意味着，先执行f(),得到该函数内嵌套的一个函数对象g,然后调用这个嵌套函数。</p>
-<p>再来个例子，闭包的典型应用：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> n = <span class="number">10</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">counter</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> n = <span class="number">0</span>;</div><div class="line">    <span class="keyword">var</span> g = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> ++n;</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">return</span> g;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> c1 = counter();</div><div class="line"><span class="built_in">console</span>.log(c1());<span class="comment">//1</span></div><div class="line"><span class="built_in">console</span>.log(c1());<span class="comment">//2</span></div></pre></td></tr></table></figure>
-<p>何时使用：即要重用变量，又要保护变量不被污染。<br>缺点：占用更多内存空间。</p>
-<p>这只是对闭包一个浅浅的理解，后续还会深入透彻理解。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">	<span class="attribute">display</span>: -webkit-flex;<span class="comment">/*Safari*/</span></div><div class="line">	<span class="attribute">display</span>: flex;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>注意</strong>，设定为Flex布局以后，子元素的float，clear和vertical-align属性将失效。<br><a id="more"></a></p>
+<h4 id="属性使用说明"><a href="#属性使用说明" class="headerlink" title="属性使用说明"></a>属性使用说明</h4><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">//容器属性</div><div class="line">.box&#123;</div><div class="line">    flex-direction: row |<span class="string"> row-reverse </span>|<span class="string"> column </span>|<span class="string"> column-reverse;</span></div><div class="line">    /*主轴方向：左到右（默认） |<span class="string"> 右到左 </span>|<span class="string"> 上到下 </span>|<span class="string"> 下到上*/</span></div><div class="line"></div><div class="line">    flex-wrap: nowrap |<span class="string"> wrap </span>|<span class="string"> wrap-reverse;</span></div><div class="line">    /*换行：不换行（默认） |<span class="string"> 换行 </span>|<span class="string"> 换行并第一行在下方*/</span></div><div class="line"></div><div class="line">    flex-flow: &lt;flex-direction&gt; ||<span class="string"> &lt;flex-wrap&gt;;</span></div><div class="line">    /*主轴方向和换行简写*/</div><div class="line"></div><div class="line">    justify-content: flex-start |<span class="string"> flex-end </span>|<span class="string"> center </span>|<span class="string"> space-between </span>|<span class="string"> space-around;</span></div><div class="line">    /*主轴对齐方式：左对齐（默认） |<span class="string"> 右对齐 </span>|<span class="string"> 居中对齐 </span>|<span class="string"> 两端对齐 </span>|<span class="string"> 平均分布*/</span></div><div class="line"></div><div class="line">    align-items: flex-start |<span class="string"> flex-end </span>|<span class="string"> center </span>|<span class="string"> baseline </span>|<span class="string"> stretch;</span></div><div class="line">    /*交叉轴对齐方式：顶部对齐（默认） |<span class="string"> 底部对齐 </span>|<span class="string"> 居中对齐 </span>|<span class="string"> 上下对齐并铺满 </span>|<span class="string"> 文本基线对齐*/</span></div><div class="line"></div><div class="line">    align-content: flex-start |<span class="string"> flex-end </span>|<span class="string"> center </span>|<span class="string"> space-between </span>|<span class="string"> space-around </span>|<span class="string"> stretch;</span></div><div class="line">    /*多主轴对齐：顶部对齐（默认） |<span class="string"> 底部对齐 </span>|<span class="string"> 居中对齐 </span>|<span class="string"> 上下对齐并铺满 </span>|<span class="string"> 上下平均分布*/</span></div><div class="line">&#125;</div><div class="line">//项目属性</div><div class="line">.item&#123;</div><div class="line">    order: &lt;integer&gt;;</div><div class="line">    /*排序：数值越小，越排前，默认为0*/</div><div class="line"></div><div class="line">    flex-grow: &lt;number&gt;; /* default 0 */</div><div class="line">    /*放大：默认0（即如果有剩余空间也不放大，值为1则放大，2是1的双倍大小，以此类推）*/</div><div class="line"></div><div class="line">    flex-shrink: &lt;number&gt;; /* default 1 */</div><div class="line">    /*缩小：默认1（如果空间不足则会缩小，值为0不缩小）*/</div><div class="line"></div><div class="line">    flex-basis: &lt;length&gt; |<span class="string"> auto; /* default auto */</span></div><div class="line">    /*固定大小：默认为0，可以设置px值，也可以设置百分比大小*/</div><div class="line"></div><div class="line">    flex: none |<span class="string"> [ &lt;'flex-grow'&gt; &lt;'flex-shrink'&gt;? </span>||<span class="string"> &lt;'flex-basis'&gt; ]</span></div><div class="line">    /*flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto，两个快捷值：auto(1 1 auto),none(0 0 auto)*/</div><div class="line"></div><div class="line">    align-self: auto |<span class="string"> flex-start </span>|<span class="string"> flex-end </span>|<span class="string"> center </span>|<span class="string"> baseline </span>|<span class="string"> stretch;</span></div><div class="line">    /*单独对齐方式：自动（默认） |<span class="string"> 顶部对齐 </span>|<span class="string"> 底部对齐 </span>|<span class="string"> 居中对齐 </span>|<span class="string"> 上下对齐并铺满 </span>|<span class="string"> 文本基线对齐*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>对于经常出现像这样的样式语句<code>flex:1;</code>有如下解释：<br>当<code>flex</code>取值为一个非负数字，则该数字为<code>flex-grow</code> 值  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.item</span>&#123;<span class="attribute">flex</span>: <span class="number">1</span>&#125;;</div><div class="line"><span class="selector-class">.item</span>&#123;</div><div class="line">	<span class="attribute">flex-grow</span>: <span class="number">1</span>;</div><div class="line">	<span class="attribute">flex-shrink</span>: <span class="number">1</span>;</div><div class="line">	<span class="attribute">flex-basis</span>: <span class="number">0%</span>;</div><div class="line">&#125;</div><div class="line">``` </div><div class="line">当`<span class="selector-tag">flex</span>`取值为一个长度或百分比，则视为<span class="selector-tag">flex-basis</span>值</div></pre></td></tr></table></figure>
+<p>.item-1{flex: 0%;}<br>.item-1{<br>    flex-grow: 1;<br>    flex-shrink: 1;<br>    flex-basis: 0%;<br>}<br>.item-2{flex: 24px;}<br>.item-2{<br>    flex-grow: 1;<br>    flex-shrink: 1;<br>    flex-basis: 24px;<br>}<br><code>``
+当</code>flex<code>取值为两个非负数字，则分别视为</code>flex-grow<code>和</code>flex-shrink<code>的值，</code>flex-basis<code>取0%      
+当</code>flex<code>取值为一个非负数字和一个长度或百分比，则分别视为</code>flex-grow<code>和</code>flex-basis<code>的值，</code>flex-shrink`取1</p>
+<p>开心😄的看完flex的语法，觉得flex的出现简直就是前端的救星呀，不过，如果要考虑到前端的祖宗浏览器（IE6，7，8，9）的兼容性问题的话，我们只能欲哭无泪呀😢</p>
 
       
 
@@ -280,7 +279,7 @@ JavaScript中的函数作用域是指：变量在声明它的函数体以及这�
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://cynthia1028.me/2017/01/09/JavaScript知识点复习之作用域、作用域链及闭包/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://cynthia1028.me/2017/04/24/说说flex布局/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -294,18 +293,9 @@ JavaScript中的函数作用域是指：变量在声明它的函数体以及这�
   
 <nav id="article-nav">
   
-    <a href="/2017/04/14/走进Benqio/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          走进Benqio
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/12/16/开启博客之旅/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">开启博客之旅</div>
+    <a href="/2017/04/18/浅谈前端浏览器兼容性/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">浅谈前端浏览器兼容性</div>
       <i class="icon-circle-right"></i>
     </a>
   

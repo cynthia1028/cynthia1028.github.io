@@ -145,6 +145,67 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-说说flex布局" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/24/说说flex布局/">说说flex布局</a>
+    </h1>
+  
+
+        <a href="/2017/04/24/说说flex布局/" class="archive-article-date">
+  	<time datetime="2017-04-24T03:08:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-24</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Flex是Flexible Box的缩写，即为“弹性布局”的意思<br>Flex布局，可以简便、完整、响应式地实现各种页面的布局<br>任何容器都可以为Flex布局：    </p>
+<ul>
+<li>通常：<code>.box{display: flex;}</code>   </li>
+<li>行内元素：<code>.box{display: inline-flex;}</code> </li>
+<li>Webkit内核的浏览器:</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">	<span class="attribute">display</span>: -webkit-flex;<span class="comment">/*Safari*/</span></div><div class="line">	<span class="attribute">display</span>: flex;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>注意</strong>，设定为Flex布局以后，子元素的float，clear和vertical-align属性将失效。<br>
+        <a class="article-more-a"  href="/2017/04/24/说说flex布局/#more">more >></a>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/24/说说flex布局/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-浅谈前端浏览器兼容性" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -276,7 +337,7 @@
       
         <p>1 <strong>作用域</strong></p>
 <p>JavaScript中的函数作用域是指：变量在声明它的函数体以及这个函数体嵌套的任意函数体内都是有定义的。函数体内声明的所有变量（不涉及到赋值）都被提前至函数的顶部声明，这种特性也被称为“声明提前”。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function test()&#123;</div><div class="line">    console.log(x);     //undefined</div><div class="line">    var x = 10;</div><div class="line">    console.log(x);     //10</div><div class="line">&#125;</div><div class="line">test();</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(x);     <span class="comment">//undefined</span></div><div class="line">    <span class="keyword">var</span> x = <span class="number">10</span>;</div><div class="line">    <span class="built_in">console</span>.log(x);     <span class="comment">//10</span></div><div class="line">&#125;</div><div class="line">test();</div></pre></td></tr></table></figure>
 <p>  全局变量拥有全局作用域，在JavaScript代码的任何地方都可以访问；在函数内部声明的变量只在函数体内有定义，即为局部变量，其作用是局部性的。<br>
         <a class="article-more-a"  href="/2017/01/09/JavaScript知识点复习之作用域、作用域链及闭包/#more">more >></a>
       
