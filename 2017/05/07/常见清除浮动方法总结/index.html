@@ -6,36 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://cynthia1028.me">
-  <title>说说flex布局 | 辛亚男的博客</title>
+  <title>常见清除浮动方法总结 | 辛亚男的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Flex是Flexible Box的缩写，即为“弹性布局”的意思Flex布局，可以简便、完整、响应式地实现各种页面的布局任何容器都可以为Flex布局：    
-
-通常：.box{display: flex;}   
-行内元素：.box{display: inline-flex;} 
-Webkit内核的浏览器:
-
-1234.box&amp;#123;	display: -webkit-flex;/*Safa">
+  <meta name="description" content="清除浮动方法总结浮动(float)，可以很优雅的让原本独立傲娇的块级元素和谐的站立于同一行，但是，同时这也引起了父容器的塌方，造成页面布局的混乱，so，清除浮动在这个时候就显得很必要！
+方法一：使用overflow属性原理：找到浮动元素的父元素，在父元素的样式中添加一个属性overflow:hidden;优点：简单，浏览器支持性好缺点：不能和position配合使用，超出的尺寸会被隐藏">
 <meta property="og:type" content="article">
-<meta property="og:title" content="说说flex布局">
-<meta property="og:url" content="http://cynthia1028.me/2017/04/24/说说flex布局/index.html">
+<meta property="og:title" content="常见清除浮动方法总结">
+<meta property="og:url" content="http://cynthia1028.me/2017/05/07/常见清除浮动方法总结/index.html">
 <meta property="og:site_name" content="辛亚男的博客">
-<meta property="og:description" content="Flex是Flexible Box的缩写，即为“弹性布局”的意思Flex布局，可以简便、完整、响应式地实现各种页面的布局任何容器都可以为Flex布局：    
-
-通常：.box{display: flex;}   
-行内元素：.box{display: inline-flex;} 
-Webkit内核的浏览器:
-
-1234.box&amp;#123;	display: -webkit-flex;/*Safa">
-<meta property="og:updated_time" content="2017-04-24T15:53:34.000Z">
+<meta property="og:description" content="清除浮动方法总结浮动(float)，可以很优雅的让原本独立傲娇的块级元素和谐的站立于同一行，但是，同时这也引起了父容器的塌方，造成页面布局的混乱，so，清除浮动在这个时候就显得很必要！
+方法一：使用overflow属性原理：找到浮动元素的父元素，在父元素的样式中添加一个属性overflow:hidden;优点：简单，浏览器支持性好缺点：不能和position配合使用，超出的尺寸会被隐藏">
+<meta property="og:updated_time" content="2017-05-07T03:13:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="说说flex布局">
-<meta name="twitter:description" content="Flex是Flexible Box的缩写，即为“弹性布局”的意思Flex布局，可以简便、完整、响应式地实现各种页面的布局任何容器都可以为Flex布局：    
-
-通常：.box{display: flex;}   
-行内元素：.box{display: inline-flex;} 
-Webkit内核的浏览器:
-
-1234.box&amp;#123;	display: -webkit-flex;/*Safa">
+<meta name="twitter:title" content="常见清除浮动方法总结">
+<meta name="twitter:description" content="清除浮动方法总结浮动(float)，可以很优雅的让原本独立傲娇的块级元素和谐的站立于同一行，但是，同时这也引起了父容器的塌方，造成页面布局的混乱，so，清除浮动在这个时候就显得很必要！
+方法一：使用overflow属性原理：找到浮动元素的父元素，在父元素的样式中添加一个属性overflow:hidden;优点：简单，浏览器支持性好缺点：不能和position配合使用，超出的尺寸会被隐藏">
   
     <link rel="alternative" href="/atom.xml" title="辛亚男的博客" type="application/atom+xml">
   
@@ -162,37 +147,37 @@ Webkit内核的浏览器:
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-说说flex布局" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-常见清除浮动方法总结" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      说说flex布局
+      常见清除浮动方法总结
     </h1>
   
 
-        <a href="/2017/04/24/说说flex布局/" class="archive-article-date">
-  	<time datetime="2017-04-24T03:08:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-24</time>
+        <a href="/2017/05/07/常见清除浮动方法总结/" class="archive-article-date">
+  	<time datetime="2017-05-07T01:45:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-07</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Flex是Flexible Box的缩写，即为“弹性布局”的意思<br>Flex布局，可以简便、完整、响应式地实现各种页面的布局<br>任何容器都可以为Flex布局：    </p>
+        <h2 id="清除浮动方法总结"><a href="#清除浮动方法总结" class="headerlink" title="清除浮动方法总结"></a>清除浮动方法总结</h2><p><em>浮动(float)，可以很优雅的让原本独立傲娇的块级元素和谐的站立于同一行，但是，同时这也引起了父容器的塌方，造成页面布局的混乱，so，清除浮动在这个时候就显得很必要！</em></p>
+<h4 id="方法一：使用overflow属性"><a href="#方法一：使用overflow属性" class="headerlink" title="方法一：使用overflow属性"></a>方法一：使用overflow属性</h4><p>原理：找到浮动元素的父元素，在父元素的样式中添加一个属性<code>overflow:hidden;</code><br>优点：简单，浏览器支持性好<br>缺点：不能和<code>position</code>配合使用，超出的尺寸会被隐藏<br><a id="more"></a></p>
+<h4 id="方法二：添加空标签"><a href="#方法二：添加空标签" class="headerlink" title="方法二：添加空标签"></a>方法二：添加空标签</h4><pre><code><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">	<span class="selector-class">.d1</span>&#123;<span class="attribute">width</span>:<span class="number">100px</span>;<span class="attribute">height</span>:<span class="number">100px</span>;<span class="attribute">background</span>:<span class="number">#f00</span>;<span class="attribute">float</span>:left&#125;</div><div class="line">	<span class="selector-class">.d2</span>&#123;<span class="attribute">width</span>:<span class="number">200px</span>;<span class="attribute">height</span>:<span class="number">200px</span>;<span class="attribute">background</span>:<span class="number">#0f0</span>;<span class="attribute">float</span>:right&#125;</div><div class="line">	<span class="selector-class">.clear</span>&#123;<span class="attribute">clear</span>:both&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span> = <span class="string">"d1"</span>&gt;</span>left<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span> = <span class="string">"d2"</span>&gt;</span>ringt<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span> = <span class="string">"clear"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">	div2</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+</code></pre><p>原理：在浮动元素下面添加一个空<code>div</code>,设置该标签样式<code>clear:both;</code>来清除浮动对页面的影响<br>优点：代码少，浏览器支持性好，不易出现怪问题<br>缺点：若页面很多浮动，会增加很多无意义的<code>div</code>，不爽😕  </p>
+<h4 id="方法三：使用伪元素清除浮动"><a href="#方法三：使用伪元素清除浮动" class="headerlink" title="方法三：使用伪元素清除浮动"></a>方法三：使用伪元素清除浮动</h4><pre><code><figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;</div><div class="line">	.d1&#123;<span class="built_in">width</span>:<span class="number">100</span>px;<span class="built_in">height</span>:<span class="number">100</span>px;<span class="built_in">background</span>:#f00;<span class="keyword">float</span>:left&#125;</div><div class="line">   	.d2&#123;<span class="built_in">width</span>:<span class="number">200</span>px;<span class="built_in">height</span>:<span class="number">200</span>px;<span class="built_in">background</span>:#<span class="number">0</span>f0;<span class="keyword">float</span>:right&#125;</div><div class="line">   	.div1:after&#123;</div><div class="line">   		content:<span class="string">""</span>;</div><div class="line">   		<span class="built_in">height</span>:<span class="number">0</span>;</div><div class="line">   		<span class="built_in">display</span>:block;</div><div class="line">   		visibility:hidden;</div><div class="line">   		<span class="built_in">clear</span>:both;</div><div class="line">   	&#125;</div><div class="line">   	.div1&#123;</div><div class="line">   		zoom:<span class="number">1</span>;<span class="comment">//为了兼容IE；</span></div><div class="line">   	&#125;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;div <span class="keyword">class</span>=<span class="string">"div1"</span>&gt;</div><div class="line">   	&lt;div <span class="keyword">class</span> = <span class="string">"d1"</span>&gt;left&lt;/div&gt;</div><div class="line">   	&lt;div <span class="keyword">class</span> = <span class="string">"d2"</span>&gt;ringt&lt;/div&gt; </div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+</code></pre><p>原理：与方法二有点类似，IE8及非IE浏览器才支持<code>:after</code>属性，<code>zoom</code>可解决IE6，IE7浮动问题<br>优点：浏览器支持性好，不易出现怪问题😄<br>缺点：代码多，需要考虑到兼容性   </p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><blockquote>
 <ul>
-<li>通常：<code>.box{display: flex;}</code>   </li>
-<li>行内元素：<code>.box{display: inline-flex;}</code> </li>
-<li>Webkit内核的浏览器:</li>
+<li>就此三种清除浮动方式的优缺点来看，本姑娘强烈推荐使用方式三、方式三、方式三！！！  </li>
+<li>如果<code>overflow:hidden;</code>您能玩的很溜的话，方式一也可以随便用；</li>
+<li>如果您有海量，能容忍大量的无意义<code>div</code>的存在,方法三也会成为你的得力助手😜</li>
 </ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">	<span class="attribute">display</span>: -webkit-flex;<span class="comment">/*Safari*/</span></div><div class="line">	<span class="attribute">display</span>: flex;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong>注意</strong>，设定为Flex布局以后，子元素的float，clear和vertical-align属性将失效。<br><a id="more"></a></p>
-<h4 id="属性使用说明"><a href="#属性使用说明" class="headerlink" title="属性使用说明"></a>属性使用说明</h4><pre><code><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*容器属性*/</span></div><div class="line"><span class="selector-class">.box</span>&#123;  </div><div class="line">    <span class="attribute">flex-direction</span>: row | row-reverse | column | column-reverse;  </div><div class="line">    <span class="comment">/*主轴方向：左到右（默认） | 右到左 | 上到下 | 下到上*/</span></div><div class="line">    <span class="attribute">flex-wrap</span>: nowrap | wrap | wrap-reverse;  </div><div class="line">    <span class="comment">/*换行：不换行（默认） | 换行 | 换行并第一行在下方*/</span>  </div><div class="line">    <span class="attribute">flex-flow</span>: &lt;flex-direction&gt; || &lt;flex-wrap&gt;;  </div><div class="line">    <span class="comment">/*主轴方向和换行简写*/</span>  </div><div class="line">    <span class="attribute">justify-content</span>: flex-start | flex-end | center | space-between | space-around;</div><div class="line">    <span class="comment">/*主轴对齐方式：左对齐（默认） | 右对齐 | 居中对齐 | 两端对齐 | 平均分布*/</span>	    <span class="attribute">align-items</span>: flex-start | flex-end | center | baseline | stretch;</div><div class="line">    <span class="comment">/*交叉轴对齐方式：顶部对齐（默认） | 底部对齐 | 居中对齐 | 上下对齐并铺满 | 文本基线对齐*/</span></div><div class="line">    <span class="attribute">align-content</span>: flex-start | flex-end | center | space-between | space-around | stretch;</div><div class="line">    <span class="comment">/*多主轴对齐：顶部对齐（默认） | 底部对齐 | 居中对齐 | 上下对齐并铺满 | 上下平均分布*/</span></div><div class="line">&#125;</div><div class="line"><span class="comment">/*项目属性*/</span></div><div class="line"><span class="selector-class">.item</span>&#123;</div><div class="line">    <span class="attribute">order</span>: &lt;integer&gt;;</div><div class="line">    <span class="comment">/*排序：数值越小，越排前，默认为0*/</span></div><div class="line">    <span class="attribute">flex-grow</span>: &lt;number&gt;; <span class="comment">/* default 0 */</span></div><div class="line">    <span class="comment">/*放大：默认0（即如果有剩余空间也不放大，值为1则放大，2是1的双倍大小，以此类推）*/</span></div><div class="line">    <span class="attribute">flex-shrink</span>: &lt;number&gt;; <span class="comment">/* default 1 */</span></div><div class="line">    <span class="comment">/*缩小：默认1（如果空间不足则会缩小，值为0不缩小）*/</span></div><div class="line">    <span class="attribute">flex-basis</span>: &lt;length&gt; | auto; <span class="comment">/* default auto */</span></div><div class="line">    <span class="comment">/*固定大小：默认为0，可以设置px值，也可以设置百分比大小*/</span></div><div class="line">    <span class="attribute">flex</span>: none | [ &lt;<span class="string">'flex-grow'</span>&gt; &lt;<span class="string">'flex-shrink'</span>&gt;? || &lt;<span class="string">'flex-basis'</span>&gt; ]</div><div class="line">    <span class="comment">/*flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto，两个快捷值：auto(1 1 auto),none(0 0 auto)*/</span></div><div class="line">    align-self: auto | flex-start | flex-end | center | baseline | stretch;  </div><div class="line">    <span class="comment">/*单独对齐方式：自动（默认） | 顶部对齐 | 底部对齐 | 居中对齐 | 上下对齐并铺满 | 文本基线对齐*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</code></pre><p>对于经常出现像这样的样式语句<code>flex:1;</code>有如下解释：<br>当<code>flex</code>取值为一个非负数字，则该数字为<code>flex-grow</code> 值    <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.item</span>&#123;<span class="attribute">flex</span>: <span class="number">1</span>&#125;;</div><div class="line"><span class="selector-class">.item</span>&#123;</div><div class="line">	<span class="attribute">flex-grow</span>: <span class="number">1</span>;</div><div class="line">	<span class="attribute">flex-shrink</span>: <span class="number">1</span>;</div><div class="line">	<span class="attribute">flex-basis</span>: <span class="number">0%</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>当<code>flex</code>取值为一个长度或百分比，则视为flex-basis值<br>    <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.item-1</span>&#123;<span class="attribute">flex</span>: <span class="number">0%</span>;&#125;</div><div class="line"><span class="selector-class">.item-1</span>&#123;</div><div class="line">	<span class="attribute">flex-grow</span>: <span class="number">1</span>;</div><div class="line">	<span class="attribute">flex-shrink</span>: <span class="number">1</span>;</div><div class="line">	<span class="attribute">flex-basis</span>: <span class="number">0%</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.item-2</span>&#123;<span class="attribute">flex</span>: <span class="number">24px</span>;&#125;</div><div class="line"><span class="selector-class">.item-2</span>&#123;</div><div class="line">	<span class="attribute">flex-grow</span>: <span class="number">1</span>;</div><div class="line">	<span class="attribute">flex-shrink</span>: <span class="number">1</span>;</div><div class="line">	<span class="attribute">flex-basis</span>: <span class="number">24px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>当<code>flex</code>取值为两个非负数字，则分别视为<code>flex-grow</code>和<code>flex-shrink</code>的值，<code>flex-basis</code>取0%<br>当<code>flex</code>取值为一个非负数字和一个长度或百分比，则分别视为<code>flex-grow</code>和<code>flex-basis</code>的值，<code>flex-shrink</code>取1</p>
-<p>开心😄的看完flex的语法，觉得flex的出现简直就是前端的救星呀，不过，如果要考虑到前端的祖宗浏览器（IE6，7，8，9）的兼容性问题的话，我们只能欲哭无泪呀😢</p>
+</blockquote>
 
       
 
@@ -277,7 +262,7 @@ Webkit内核的浏览器:
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://cynthia1028.me/2017/04/24/说说flex布局/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://cynthia1028.me/2017/05/07/常见清除浮动方法总结/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -291,18 +276,9 @@ Webkit内核的浏览器:
   
 <nav id="article-nav">
   
-    <a href="/2017/05/07/常见清除浮动方法总结/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          常见清除浮动方法总结
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/04/18/浅谈前端浏览器兼容性/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">浅谈前端浏览器兼容性</div>
+    <a href="/2017/04/24/说说flex布局/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">说说flex布局</div>
       <i class="icon-circle-right"></i>
     </a>
   
