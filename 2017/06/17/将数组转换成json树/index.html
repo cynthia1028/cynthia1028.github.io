@@ -6,21 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://cynthia1028.me">
-  <title>常见清除浮动方法总结 | 辛亚男的博客</title>
+  <title>将数组转换成json树 | 辛亚男的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="清除浮动方法总结浮动(float)，可以很优雅的让原本独立傲娇的块级元素和谐的站立于同一行，但是，同时这也引起了父容器的塌方，造成页面布局的混乱，so，清除浮动在这个时候就显得很必要！
-方法一：使用overflow属性原理：找到浮动元素的父元素，在父元素的样式中添加一个属性overflow:hidden;优点：简单，浏览器支持性好缺点：不能和position配合使用，超出的尺寸会被隐藏">
+  <meta name="description" content="将数据由数组形式转换成所需的JSON树格式这个问题困扰了我整整两天，无数次的百度与请教同事都没有得到满意的结果，最后通过学习群老铁们的指点，终于拨开云雾见天日
+要求：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="常见清除浮动方法总结">
-<meta property="og:url" content="http://cynthia1028.me/2017/05/07/常见清除浮动方法总结/index.html">
+<meta property="og:title" content="将数组转换成json树">
+<meta property="og:url" content="http://cynthia1028.me/2017/06/17/将数组转换成json树/index.html">
 <meta property="og:site_name" content="辛亚男的博客">
-<meta property="og:description" content="清除浮动方法总结浮动(float)，可以很优雅的让原本独立傲娇的块级元素和谐的站立于同一行，但是，同时这也引起了父容器的塌方，造成页面布局的混乱，so，清除浮动在这个时候就显得很必要！
-方法一：使用overflow属性原理：找到浮动元素的父元素，在父元素的样式中添加一个属性overflow:hidden;优点：简单，浏览器支持性好缺点：不能和position配合使用，超出的尺寸会被隐藏">
-<meta property="og:updated_time" content="2017-06-18T02:17:50.000Z">
+<meta property="og:description" content="将数据由数组形式转换成所需的JSON树格式这个问题困扰了我整整两天，无数次的百度与请教同事都没有得到满意的结果，最后通过学习群老铁们的指点，终于拨开云雾见天日
+要求：">
+<meta property="og:image" content="http://i1.buimg.com/581088/a5da43d6bf3c2946.png">
+<meta property="og:image" content="http://i1.buimg.com/581088/a4cfbfdc613fc139.png">
+<meta property="og:updated_time" content="2017-06-18T02:26:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="常见清除浮动方法总结">
-<meta name="twitter:description" content="清除浮动方法总结浮动(float)，可以很优雅的让原本独立傲娇的块级元素和谐的站立于同一行，但是，同时这也引起了父容器的塌方，造成页面布局的混乱，so，清除浮动在这个时候就显得很必要！
-方法一：使用overflow属性原理：找到浮动元素的父元素，在父元素的样式中添加一个属性overflow:hidden;优点：简单，浏览器支持性好缺点：不能和position配合使用，超出的尺寸会被隐藏">
+<meta name="twitter:title" content="将数组转换成json树">
+<meta name="twitter:description" content="将数据由数组形式转换成所需的JSON树格式这个问题困扰了我整整两天，无数次的百度与请教同事都没有得到满意的结果，最后通过学习群老铁们的指点，终于拨开云雾见天日
+要求：">
+<meta name="twitter:image" content="http://i1.buimg.com/581088/a5da43d6bf3c2946.png">
   
     <link rel="alternative" href="/atom.xml" title="辛亚男的博客" type="application/atom+xml">
   
@@ -147,37 +150,33 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-常见清除浮动方法总结" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-将数组转换成json树" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      常见清除浮动方法总结
+      将数组转换成json树
     </h1>
   
 
-        <a href="/2017/05/07/常见清除浮动方法总结/" class="archive-article-date">
-  	<time datetime="2017-05-07T01:45:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-07</time>
+        <a href="/2017/06/17/将数组转换成json树/" class="archive-article-date">
+  	<time datetime="2017-06-17T01:12:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-17</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="清除浮动方法总结"><a href="#清除浮动方法总结" class="headerlink" title="清除浮动方法总结"></a>清除浮动方法总结</h2><p><em>浮动(float)，可以很优雅的让原本独立傲娇的块级元素和谐的站立于同一行，但是，同时这也引起了父容器的塌方，造成页面布局的混乱，so，清除浮动在这个时候就显得很必要！</em></p>
-<h4 id="方法一：使用overflow属性"><a href="#方法一：使用overflow属性" class="headerlink" title="方法一：使用overflow属性"></a>方法一：使用overflow属性</h4><p>原理：找到浮动元素的父元素，在父元素的样式中添加一个属性<code>overflow:hidden;</code><br>优点：简单，浏览器支持性好<br>缺点：不能和<code>position</code>配合使用，超出的尺寸会被隐藏<br><a id="more"></a></p>
-<h4 id="方法二：添加空标签"><a href="#方法二：添加空标签" class="headerlink" title="方法二：添加空标签"></a>方法二：添加空标签</h4><pre><code><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">	<span class="selector-class">.d1</span>&#123;<span class="attribute">width</span>:<span class="number">100px</span>;<span class="attribute">height</span>:<span class="number">100px</span>;<span class="attribute">background</span>:<span class="number">#f00</span>;<span class="attribute">float</span>:left&#125;</div><div class="line">	<span class="selector-class">.d2</span>&#123;<span class="attribute">width</span>:<span class="number">200px</span>;<span class="attribute">height</span>:<span class="number">200px</span>;<span class="attribute">background</span>:<span class="number">#0f0</span>;<span class="attribute">float</span>:right&#125;</div><div class="line">	<span class="selector-class">.clear</span>&#123;<span class="attribute">clear</span>:both&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span> = <span class="string">"d1"</span>&gt;</span>left<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span> = <span class="string">"d2"</span>&gt;</span>ringt<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span> = <span class="string">"clear"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">	div2</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-</code></pre><p>原理：在浮动元素下面添加一个空<code>div</code>,设置该标签样式<code>clear:both;</code>来清除浮动对页面的影响<br>优点：代码少，浏览器支持性好，不易出现怪问题<br>缺点：若页面很多浮动，会增加很多无意义的<code>div</code>，不爽😕  </p>
-<h4 id="方法三：使用伪元素清除浮动"><a href="#方法三：使用伪元素清除浮动" class="headerlink" title="方法三：使用伪元素清除浮动"></a>方法三：使用伪元素清除浮动</h4><figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;</div><div class="line">	.d1&#123;<span class="built_in">width</span>:<span class="number">100</span>px;<span class="built_in">height</span>:<span class="number">100</span>px;<span class="built_in">background</span>:#f00;<span class="keyword">float</span>:left&#125;</div><div class="line">   	.d2&#123;<span class="built_in">width</span>:<span class="number">200</span>px;<span class="built_in">height</span>:<span class="number">200</span>px;<span class="built_in">background</span>:#<span class="number">0</span>f0;<span class="keyword">float</span>:right&#125;</div><div class="line">   	.div1:after&#123;</div><div class="line">   		content:<span class="string">""</span>;</div><div class="line">   		<span class="built_in">height</span>:<span class="number">0</span>;</div><div class="line">   		<span class="built_in">display</span>:block;</div><div class="line">   		visibility:hidden;</div><div class="line">   		<span class="built_in">clear</span>:both;</div><div class="line">   	&#125;</div><div class="line">   	.div1&#123;</div><div class="line">   		zoom:<span class="number">1</span>;<span class="comment">//为了兼容IE；</span></div><div class="line">   	&#125;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;div <span class="keyword">class</span>=<span class="string">"div1"</span>&gt;</div><div class="line">   	&lt;div <span class="keyword">class</span> = <span class="string">"d1"</span>&gt;left&lt;/div&gt;</div><div class="line">   	&lt;div <span class="keyword">class</span> = <span class="string">"d2"</span>&gt;ringt&lt;/div&gt; </div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
-<p>原理：与方法二有点类似，IE8及非IE浏览器才支持<code>:after</code>属性，<code>zoom</code>可解决IE6，IE7浮动问题<br>优点：浏览器支持性好，不易出现怪问题😄<br>缺点：代码多，需要考虑到兼容性   </p>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><blockquote>
+        <h2 id="将数据由数组形式转换成所需的JSON树格式"><a href="#将数据由数组形式转换成所需的JSON树格式" class="headerlink" title="将数据由数组形式转换成所需的JSON树格式"></a>将数据由数组形式转换成所需的JSON树格式</h2><p><em>这个问题困扰了我整整两天，无数次的百度与请教同事都没有得到满意的结果，最后通过学习群老铁们的指点，终于拨开云雾见天日</em></p>
+<h3 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h3><p><img src="http://i1.buimg.com/581088/a5da43d6bf3c2946.png" alt="Markdown"><br><a id="more"></a><br><img src="http://i1.buimg.com/581088/a4cfbfdc613fc139.png" alt="Markdown"></p>
+<p>将上图数据格式转换成下图格式：</p>
 <ul>
-<li>就此三种清除浮动方式的优缺点来看，本姑娘强烈推荐使用方式三、方式三、方式三！！！  </li>
-<li>如果<code>overflow:hidden;</code>您能玩的很溜的话，方式一也可以随便用；</li>
-<li>如果您有海量，能容忍大量的无意义<code>div</code>的存在,方法三也会成为你的得力助手😜</li>
+<li>id 与 pid决定数据的阶层  </li>
+<li>type:camera决定数据分类catalog or device</li>
 </ul>
-</blockquote>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法:"></a>方法:</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> trans =<span class="function"><span class="keyword">function</span> <span class="params">(list,pid)</span> </span>&#123;</div><div class="line">       <span class="keyword">var</span> getC = <span class="function"><span class="keyword">function</span> <span class="params">(list,id)</span> </span>&#123;</div><div class="line">       	<span class="keyword">var</span> catalogs = [];</div><div class="line">       	<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;<span class="keyword">list</span>.length;i++)&#123;</div><div class="line">           	<span class="keyword">if</span>(<span class="keyword">list</span>[i].type==<span class="string">'vs'</span>&amp;&amp;<span class="keyword">list</span>[i].pid ==id)&#123;</div><div class="line">               		<span class="keyword">var</span> catalog = <span class="keyword">list</span>[i];</div><div class="line">               		<span class="keyword">var</span> childCatalogs = getC(<span class="keyword">list</span>,<span class="keyword">list</span>[i].id);</div><div class="line">               		<span class="keyword">if</span>(childCatalogs)&#123;</div><div class="line">                   		catalog.catalogs = childCatalogs;</div><div class="line">               		&#125;</div><div class="line">              			<span class="keyword">var</span> childDevices = getD(<span class="keyword">list</span>,<span class="keyword">list</span>[i].id);</div><div class="line">               		<span class="keyword">if</span>(childDevices.length!=<span class="number">0</span>)&#123;</div><div class="line">                   		catalog.devices = childDevices;</div><div class="line">             		&#125;</div><div class="line">               		catalogs.push(catalog);</div><div class="line">           	&#125;</div><div class="line">       	&#125;</div><div class="line">       	<span class="keyword">return</span> catalogs  </div><div class="line">       	&#125;</div><div class="line">       	<span class="keyword">var</span> getD = <span class="function"><span class="keyword">function</span> <span class="params">(list,id)</span> </span>&#123;</div><div class="line">       		<span class="keyword">var</span> devices = [];</div><div class="line">       		<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;<span class="keyword">list</span>.length;i++)&#123;</div><div class="line">           			<span class="keyword">if</span>(<span class="keyword">list</span>[i].type==<span class="string">'camera'</span>&amp;&amp;<span class="keyword">list</span>[i].pid ==id)&#123;</div><div class="line">               			<span class="keyword">var</span> device = <span class="keyword">list</span>[i];</div><div class="line">               			<span class="keyword">var</span> childDevices = getD(<span class="keyword">list</span>,<span class="keyword">list</span>[i].id);</div><div class="line">               			<span class="keyword">if</span>(childDevices.length!=<span class="number">0</span>)&#123;</div><div class="line">                   			device = childDevices;</div><div class="line">               			&#125;</div><div class="line">               			devices.push(device)</div><div class="line">           			&#125;</div><div class="line">       		&#125;</div><div class="line">       		<span class="keyword">return</span> devices</div><div class="line">   		&#125;</div><div class="line">        <span class="keyword">var</span> tojson = <span class="function"><span class="keyword">function</span> <span class="params">(list,pid)</span> </span>&#123;</div><div class="line">       	 <span class="keyword">var</span> result = &#123;&#125;;</div><div class="line">       	 <span class="keyword">for</span>(<span class="keyword">var</span> i= <span class="number">0</span>;i&lt;<span class="keyword">list</span>.length;i++)&#123;</div><div class="line">           	 <span class="keyword">if</span>(<span class="keyword">list</span>[i].pid==pid)&#123;</div><div class="line">               	 result.pid = <span class="keyword">list</span>[i].pid;</div><div class="line">               	 result.name =<span class="keyword">list</span>[i].name;</div><div class="line">                 result.catalogs = getC(<span class="keyword">list</span>,<span class="keyword">list</span>[i].id);</div><div class="line">               	 result.devices = getD(<span class="keyword">list</span>,<span class="keyword">list</span>[i].id)</div><div class="line">           	 &#125;</div><div class="line">       	 &#125;</div><div class="line">       	 <span class="keyword">return</span> result</div><div class="line">   	 &#125;</div><div class="line">   	<span class="keyword">return</span> tojson(<span class="keyword">list</span>,pid)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>方法比较基础，也比较好理解，谢谢老铁们了！</p>
 
       
 
@@ -262,7 +261,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://cynthia1028.me/2017/05/07/常见清除浮动方法总结/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://cynthia1028.me/2017/06/17/将数组转换成json树/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -276,18 +275,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/06/17/将数组转换成json树/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          将数组转换成json树
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/04/24/说说flex布局/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">说说flex布局</div>
+    <a href="/2017/05/07/常见清除浮动方法总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">常见清除浮动方法总结</div>
       <i class="icon-circle-right"></i>
     </a>
   
